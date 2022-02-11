@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Manage Product Unit</title>
+</head>
+<body>
+<div align="center">
+<h1>Products List</h1><br>
+<h2><b><a href="/newproduct">Create New ProductList</a></b></h2>
+<table border="1" cellpadding="10">
+<thead>
+<tr>
+<th>Product id</th>
+<th>Product Name</th>
+<th>Category</th>
+<th>Price</th>
+<th>Status</th>
+<th>size</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="product : ${listProduct}">
+<td th:text="${product.id}">Product id</td>
+<td th:text="${product.productName}">Product Name</td>
+<td th:text="${product.category}">Category</td>
+<td th:text="${product.price}">Price</td>
+<td th:text="${product.status}">Status</td>
+<td th:text="${product.size}">size</td>
+</tr></tbody>
+</table>
+<a href="/logout">LogOut</a>
+</div>
+</body>
+</html>
+                 
